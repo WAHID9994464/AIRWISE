@@ -1,0 +1,9 @@
+Metric,Value,Category,Description
+Mean,78.7679,Statistics,Sample mean of active connected Wi-Fi users
+Variance,1669.9997,Statistics,Sample variance of active connected Wi-Fi users (s^2)
+Standard_Deviation,40.8656,Statistics,Sample standard deviation of active connected Wi-Fi users (s)
+Correlation,0.9954,Regression,Pearson correlation coefficient between active users and bandwidth
+Regression_R2,0.9908,Regression,OLS regression coefficient of determination (R-squared)
+ANOVA_F_Statistic,30.9607,HypothesisTesting,One-way ANOVA F-statistic across observation time groups
+Chi_Square_Statistic,20.7143,ChiSquare,Chi-Square goodness-of-fit test statistic on network states
+Congestion_Probability,0.0893,Probability,Empirical probability of network entering Congested state

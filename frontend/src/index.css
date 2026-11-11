@@ -1,0 +1,123 @@
+@import 'katex/dist/katex.min.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --bg-main: #080808;
+  --bg-secondary: #151515;
+  --bg-card: #202020;
+  --gold: #D4AF37;
+  --border-gold: #66531C;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #080808;
+  color: #FFFFFF;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+::-webkit-scrollbar-thumb {
+  background: #33280B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #66531C;
+}
+
+/* 21st.dev Shimmer Beam Animation */
+@keyframes shimmerMove {
+  0% {
+    left: -120%;
+  }
+  100% {
+    left: 220%;
+  }
+}
+
+.shimmer-beam {
+  animation: shimmerMove 3.5s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* 21st.dev Ambient Glow Effects */
+.glow-gold {
+  box-shadow: 0 0 20px -5px rgba(212, 175, 55, 0.25);
+}
+
+.glow-green {
+  box-shadow: 0 0 20px -5px rgba(0, 200, 83, 0.25);
+}
+
+.glow-red {
+  box-shadow: 0 0 20px -5px rgba(229, 57, 53, 0.25);
+}
+
+/* Responsive Mathematical Formula Containers & KaTeX Display Configuration */
+.katex-display {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0.25rem 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  text-align: center !important;
+  overflow: visible !important;
+}
+
+.katex-display > .katex {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  text-align: center !important;
+  font-size: clamp(0.92rem, 2.2vw, 1.12rem) !important;
+}
+
+.katex-display > .katex > .katex-html {
+  max-width: 100% !important;
+  min-width: 0 !important;
+  text-align: center !important;
+}
+
+.katex .mtable {
+  margin: 0 auto !important;
+  max-width: 100% !important;
+}
+
+.katex .mtable .col-align-c > .vlist-t > .vlist-r > .vlist {
+  text-align: center !important;
+}
+
+/* Print styling for academic reports */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .card-print {
+    border: 1px solid #cccccc !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    break-inside: avoid;
+  }
+}
